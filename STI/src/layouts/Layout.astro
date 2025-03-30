@@ -2,7 +2,7 @@
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-import Analytics from '@vercel/analytics/astro'
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <!doctype html>
@@ -11,15 +11,14 @@ import Analytics from '@vercel/analytics/astro'
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="images/STI.webp" />
     <title>STI</title>
   </head>
   <body>
-
     <div class="h-screen w-screen">
-        <div class="w-full">
-            <Navbar />
-
-        </div>
+      <div class="w-full">
+        <Navbar />
+      </div>
       <div class="z-[100] w-full">
         <main>
           <slot />
