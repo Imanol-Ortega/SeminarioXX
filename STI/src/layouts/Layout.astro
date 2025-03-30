@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import Analytics from "@vercel/analytics/astro";
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 ---
 
 <!doctype html>
@@ -27,6 +28,7 @@ import Analytics from "@vercel/analytics/astro";
       <footer></footer>
     </div>
     <Analytics />
+    <SpeedInsights/>
   </body>
 </html>
 
