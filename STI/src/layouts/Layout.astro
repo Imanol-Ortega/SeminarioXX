@@ -13,7 +13,7 @@ import "../styles/global.css";
     <title>STI</title>
   </head>
   <body>
-    <div class="h-screen w-screen bg-black">
+    <div class="h-screen w-screen bg-opacity-50">
       <Navbar />
       <div class="z-[100] mb-0 w-full pt-[90px] pr-0 pb-[90px] pl-0">
         <main>
@@ -32,5 +32,22 @@ import "../styles/global.css";
     -ms-user-select: none;
     user-select: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('/images/fondo.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index:-1;
+    background-color: black;
+
   }
+  body::before {
+    content: ''; /* Crear contenido vacío */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Color de fondo negro con opacidad */
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
 </style>
