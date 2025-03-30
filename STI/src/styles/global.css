@@ -1,2 +1,6 @@
 @import "tailwindcss";
-/* Animación de entrada */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
