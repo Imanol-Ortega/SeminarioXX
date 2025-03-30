@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -12,16 +13,16 @@ import Footer from "../components/Footer.astro";
     <title>STI</title>
   </head>
   <body>
-    <div id="app">
-      <nav>
-        <Navbar />
-      </nav>
-      <main>
-        <slot />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
+    <div class="h-screen w-screen bg-black">
+      <nav></nav>
+      <div
+        class="z-[100] mb-0 w-full pt-[90px] pr-0 pb-[90px] pl-0"
+      >
+        <main>
+          <slot />
+        </main>
+      </div>
+      <footer></footer>
     </div>
   </body>
 </html>
