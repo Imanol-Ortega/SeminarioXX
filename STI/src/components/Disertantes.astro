@@ -1,48 +1,6 @@
 ---
 import DisertanteCard from "./DisertanteCard.astro";
-
-const speakers = [
-  {
-    name: "John Doe",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet, officiis adipisci voluptatibus libero tempora nulla, natus minus facilis praesentium corrupti accusamus dolorum ut, quisquam molestias quaerat magnam rerum laudantium. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet, officiis adipisci voluptatibus libero tempora nulla, natus minus facilis praesentium corrupti accusamus dolorum ut, quisquam molestias quaerat magnam rerum laudantium.",
-    image: "/images/imanol.webp",
-    linkedin: "#",
-    instagram: "#",
-    revealed: true,
-  },
-  {
-    name: "Jane Smith",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet, officiis adipisci voluptatibus libero tempora nulla, natus minus facilis praesentium corrupti accusamus dolorum ut, quisquam molestias quaerat magnam rerum laudantium. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet, officiis adipisci voluptatibus libero tempora nulla, natus minus facilis praesentium corrupti accusamus dolorum ut, quisquam molestias quaerat magnam rerum laudantium.",
-    image: "/images/imanol.webp",
-    linkedin: "#",
-    instagram: "#",
-    revealed: false,
-  },
-  {
-    name: "Alice Brown",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet, officiis adipisci voluptatibus libero tempora nulla, natus minus facilis praesentium corrupti accusamus dolorum ut, quisquam molestias quaerat magnam rerum laudantium. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet, officiis adipisci voluptatibus libero tempora nulla, natus minus facilis praesentium corrupti accusamus dolorum ut, quisquam molestias quaerat magnam rerum laudantium.",
-    image: "/images/imanol.webp",
-    linkedin: "#",
-    instagram: "#",
-    revealed: false,
-  },
-  {
-    name: "Bob White",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet, officiis adipisci voluptatibus libero tempora nulla, natus minus facilis praesentium corrupti accusamus dolorum ut, quisquam molestias quaerat magnam rerum laudantium. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet, officiis adipisci voluptatibus libero tempora nulla, natus minus facilis praesentium corrupti accusamus dolorum ut, quisquam molestias quaerat magnam rerum laudantium.",
-    image: "/images/imanol.webp",
-    linkedin: "#",
-    instagram: "#",
-    revealed: false,
-  },
-  {
-    name: "Charlie Black",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet, officiis adipisci voluptatibus libero tempora nulla, natus minus facilis praesentium corrupti accusamus dolorum ut, quisquam molestias quaerat magnam rerum laudantium. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet, officiis adipisci voluptatibus libero tempora nulla, natus minus facilis praesentium corrupti accusamus dolorum ut, quisquam molestias quaerat magnam rerum laudantium.",
-    image: "/images/imanol.webp",
-    linkedin: "#",
-    instagram: "#",
-    revealed: false,
-  },
-];
+import { speakersData } from "../lib/speakears";
 ---
 
 <section
@@ -54,7 +12,7 @@ const speakers = [
   </h2>
   <div class="flex w-full max-w-4xl flex-col gap-6">
     {
-      speakers.map((speaker) => (
+      speakersData.map((speaker) => (
         <DisertanteCard
           name={speaker.name}
           description={speaker.description}

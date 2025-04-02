@@ -1,16 +1,10 @@
 ---
 import Instagram from "../icons/Instagram.astro";
 import Linkedin from "../icons/Linkedin.astro";
+import type {Speaker} from "../interfaces/speakersInterfaces"
 
-interface SpeakerProps {
-  name: string;
-  description: string;
-  image: string;
-  linkedin: string;
-  instagram: string;
-  revealed: boolean;
-}
-const props: SpeakerProps = Astro.props as SpeakerProps;
+
+const props: Speaker = Astro.props as Speaker;
 ---
 
 <div class="flex flex-col items-center justify-center p-12 text-white">
