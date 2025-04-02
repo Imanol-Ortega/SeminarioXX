@@ -1,0 +1,52 @@
+---
+import Instagram from "../icons/Instagram.astro";
+import Linkedin from "../icons/Linkedin.astro";
+
+interface SpeakerProps {
+  name: string;
+  description: string;
+  image: string;
+  linkedin: string;
+  instagram: string;
+  revealed: boolean;
+}
+const props: SpeakerProps = Astro.props as SpeakerProps;
+---
+
+<div class="flex flex-col items-center justify-center p-16 text-white">
+  <div class="relative h-96 w-96 overflow-hidden rounded-2xl">
+    <div
+      class={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
+        props.revealed ? "opacity-0" : "opacity-100"
+      }`}
+    >
+      <span class="text-6xl font-bold text-gray-500">?</span>
+    </div>
+
+    <img
+      src={props.image}
+      alt={props.name}
+      class={`absolute inset-0 w-full h-full object-cover transition-all duration-300 ${
+        props.revealed
+          ? "filter-none"
+          : "filter blur-3xl [filter:pixelate(10px)]"
+      }`}
+    />
+  </div>
+  <div
+    class={`mt-4 text-center transition-all duration-300 ${
+      props.revealed ? "filter-none" : "filter blur-md [filter:pixelate(10px)]"
+    }`}
+  >
+    <h3 class="text-xl font-bold">{props.name}</h3>
+    <p class="text-sm text-gray-300">{props.description}</p>
+    <div class="mt-2 flex justify-center gap-4">
+      <a href={props.linkedin} target="_blank">
+        <Linkedin />
+      </a>
+      <a href={props.instagram} target="_blank">
+        <Instagram />
+      </a>
+    </div>
+  </div>
+</div>

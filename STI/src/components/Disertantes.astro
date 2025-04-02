@@ -1,6 +1,69 @@
+---
+import DisertanteCard from "./DisertanteCard.astro";
+
+const speakers = [
+  {
+    name: "John Doe",
+    description: "Experto en desarrollo web",
+    image: "/images/imanol.webp",
+    linkedin: "#",
+    instagram: "#",
+    revealed: false,
+  },
+  {
+    name: "Jane Smith",
+    description: "Ingeniera de software",
+    image: "/images/imanol.webp",
+    linkedin: "#",
+    instagram: "#",
+    revealed: false,
+  },
+  {
+    name: "Alice Brown",
+    description: "Especialista en IA",
+    image: "/images/imanol.webp",
+    linkedin: "#",
+    instagram: "#",
+    revealed: false,
+  },
+  {
+    name: "Bob White",
+    description: "Desarrollador Full Stack",
+    image: "/images/imanol.webp",
+    linkedin: "#",
+    instagram: "#",
+    revealed: false,
+  },
+  {
+    name: "Charlie Black",
+    description: "Arquitecto de software",
+    image: "/images/imanol.webp",
+    linkedin: "#",
+    instagram: "#",
+    revealed: false,
+  },
+];
+---
+
 <section
   id="disertantes"
-  class="flex h-screen items-center justify-center px-4"
+  class="flex h-full w-full flex-col items-center justify-start px-4 py-8"
 >
-  <p class="text-center text-2xl text-white sm:text-4xl">Próximamente...</p>
+  <h2 class="mb-8 text-center text-2xl font-bold text-white sm:text-4xl">
+    Disertantes
+  </h2>
+  <div class="flex w-full max-w-4xl flex-col gap-6">
+    {
+      speakers.map((speaker) => (
+        <DisertanteCard
+          name={speaker.name}
+          description={speaker.description}
+          image={speaker.image}
+          linkedin={speaker.linkedin}
+          instagram={speaker.instagram}
+          revealed={speaker.revealed}
+        />
+      ))
+    }
+  </div>
 </section>
