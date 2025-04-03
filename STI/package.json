@@ -1,23 +1,25 @@
 {
-	"name": "sti",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro",
-		"lint": "biome lint --write .",
-		"lint:fix": "biome check --write ."
-	},
-	"dependencies": {
-		"@tailwindcss/vite": "^4.0.17",
-		"@vercel/analytics": "^1.5.0",
-		"@vercel/speed-insights": "^1.2.0",
-		"astro": "^5.5.4",
-		"tailwindcss": "^4.0.17"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4"
-	}
+  "name": "sti",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "biome lint --write .",
+    "lint:fix": "biome check --write ."
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.17",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "astro": "^5.5.4",
+    "tailwindcss": "^4.0.17"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1"
+  }
 }
