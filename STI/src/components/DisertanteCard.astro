@@ -1,15 +1,13 @@
 ---
 import Instagram from "../icons/Instagram.astro";
 import Linkedin from "../icons/Linkedin.astro";
-import type {Speaker} from "../interfaces/speakersInterfaces"
-
+import type { Speaker } from "../interfaces/speakersInterfaces";
 
 const props: Speaker = Astro.props as Speaker;
 ---
 
 <div class="flex flex-col items-center justify-center p-12 text-white">
   <div class="relative h-80 w-80 overflow-hidden rounded-2xl">
-
     <div
       class={`absolute inset-0 z-10 flex items-center justify-center transition-opacity duration-300 ${
         props.revealed ? "opacity-0" : "opacity-100"
@@ -41,7 +39,6 @@ const props: Speaker = Astro.props as Speaker;
       <a href={props.instagram} target="_blank">
         <Instagram />
       </a>
-
     </div>
   </div>
 </div>
