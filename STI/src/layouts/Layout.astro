@@ -13,7 +13,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="images/STI.webp" />
-    <title>STI</title>
+    <title>SeminarioUCI</title>
   </head>
   <body>
     <div class="h-screen w-screen">
@@ -45,22 +45,16 @@ import SpeedInsights from "@vercel/speed-insights/astro";
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-
     background-color: black;
   }
   body::before {
-    content: ""; /* Crear contenido vacío */
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.6
-    ); /* Color de fondo negro con opacidad */
-    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
   }
 </style>
